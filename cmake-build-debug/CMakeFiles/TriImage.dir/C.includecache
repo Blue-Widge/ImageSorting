@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/bluew/CLionProjects/TriImage/libbmp.h
+
+C:/Users/bluew/CLionProjects/TriImage/main.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+libbmp.h
+C:/Users/bluew/CLionProjects/TriImage/libbmp.h
+

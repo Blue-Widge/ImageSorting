@@ -1,0 +1,3 @@
+C:/Users/bluew/CLionProjects/TriImage/cmake-build-debug/CMakeFiles/TriImage.dir
+C:/Users/bluew/CLionProjects/TriImage/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bluew/CLionProjects/TriImage/cmake-build-debug/CMakeFiles/rebuild_cache.dir
