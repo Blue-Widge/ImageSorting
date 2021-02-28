@@ -22,18 +22,34 @@ int CompareRed(Pixel* A, Pixel* B)
 
 int CompareLuminosity(Pixel* A, Pixel* B)
 {
-    if (A->R + A->B + A->G > B->R + B->B + B->G)
+    if (A->Y > B->Y)
         return 1;
-    else if (A->R + A->B + A->G == B->R + B->B + B->G)
+    else if (A->Y == B->Y)
         return 0;
     else
         return -1;
 }
 
-int CompareColorFromRedToBlue(Pixel* A, Pixel* B)
+int CompareColor(Pixel* A, Pixel* B)
 {
-
+    if (A->H > B->H)
+        return 1;
+    else if (A->H == B->H)
+        return 0;
+    else
+        return -1;
 }
+
+int CompareCb(Pixel *A, Pixel* B)
+{
+    if (A->Cr > B->Cr)
+        return 1;
+    else if (A->Cr == B->Cr)
+        return 0;
+    else
+        return -1;
+}
+
 int PartitionPixel(Image *Pic, int G, int D, int (*Compare)(Pixel *A, Pixel *B)) {
     int pivot = G;
     while (G < D)
@@ -82,7 +98,7 @@ int main() {
     srand(time(NULL));
     Image *Pic = readImage("../Pics/Babybijau.bmp");
     printf(" Size : %d header : %s\n",Pic->size, Pic->header);
-    sortImage(Pic, 72, Pic->size - 1, CompareColorFromRedToBlue);
+    sortImage(Pic, 0, Pic->size - 1, CompareColor);
     writeImage(Pic, "../Pics/testAfter.bmp");
 
     return 0;
