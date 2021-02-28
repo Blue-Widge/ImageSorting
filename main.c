@@ -1,104 +1,93 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 #include "libbmp.h"
+#include "Compare.h"
+#include "Sort.h"
 
-void ExchangePixel(Pixel* A, Pixel* B)
+void Menu(int* Method)
 {
-    Pixel temp = *A;
-    *A = *B;
-    *B = temp;
-}
+    char AvailableSorts[9][2] = {"R","G","B","H","S","V","Y","Cb","Cr"};
 
-int CompareRed(Pixel* A, Pixel* B)
-{
-    if (A->R < B->R)
-        return -1;
-    else if ( A->R == B->R)
-        return 0;
-    else
-        return 1;
-}
+    printf(" _____                                            _   _             \n"
+           "|_   _|                                          | | (_)            \n"
+           "  | | _ __ ___   __ _  __ _  ___   ___  ___  _ __| |_ _ _ __   __ _ \n"
+           "  | || '_ ` _ \\ / _` |/ _` |/ _ \\ / __|/ _ \\| '__| __| | '_ \\ / _` |\n"
+           " _| || | | | | | (_| | (_| |  __/ \\__ \\ (_) | |  | |_| | | | | (_| |\n"
+           " \\___/_| |_| |_|\\__,_|\\__, |\\___| |___/\\___/|_|   \\__|_|_| |_|\\__, |\n"
+           "                       __/ |                                   __/ |\n"
+           "                      |___/                                   |___/\n\n\n");
 
-int CompareLuminosity(Pixel* A, Pixel* B)
-{
-    if (A->Y > B->Y)
-        return 1;
-    else if (A->Y == B->Y)
-        return 0;
-    else
-        return -1;
-}
-
-int CompareColor(Pixel* A, Pixel* B)
-{
-    if (A->H > B->H)
-        return 1;
-    else if (A->H == B->H)
-        return 0;
-    else
-        return -1;
-}
-
-int CompareCb(Pixel *A, Pixel* B)
-{
-    if (A->Cr > B->Cr)
-        return 1;
-    else if (A->Cr == B->Cr)
-        return 0;
-    else
-        return -1;
-}
-
-int PartitionPixel(Image *Pic, int G, int D, int (*Compare)(Pixel *A, Pixel *B)) {
-    int pivot = G;
-    while (G < D)
+    for (int i = 0; i<9; ++i)
     {
-        if (pivot == G)
-        {
-            if (Compare(&Pic->pix[pivot], &Pic->pix[D]) == 1)
-            {
-                ExchangePixel(&Pic->pix[pivot], &Pic->pix[D]);
-                G = pivot;
-                pivot = D;
-            }
-            else
-            {
-                D--;
-            }
-        }
-        else if (pivot == D)
-        {
-            if (Compare(&Pic->pix[pivot], &Pic->pix[G]) == -1)
-            {
-                ExchangePixel(&Pic->pix[pivot], &Pic->pix[G]);
-                D = pivot;
-                pivot = G;
-            }
-            else
-            {
-                G++;
-            }
-        }
+        printf("- (%d) Trier en fonction de %.2s\n", i+1, AvailableSorts[i]);
     }
-    return pivot;
+    printf("\n\n Votre choix (1-9) : ");
+    scanf("%d",Method);
 }
-void sortImage(Image *Pic, int G, int D, int (*Compare)(Pixel* A, Pixel* B))
+
+void LaunchSort(int* Method, float* execTime, Image* Pic)
 {
-   // int RandPivot = rand()%(D-G+1) + G;
- //   ExchangePixel(&Pic->pix[RandPivot], &Pic->pix[G]);
-    int pivot = PartitionPixel(Pic, G, D, Compare);
-    if (pivot > G)
-        sortImage(Pic, G, pivot - 1, Compare);
-    if (pivot < D)
-        sortImage(Pic, pivot + 1, D, Compare);
+    clock_t start, end;
+    switch(*Method)
+    {
+        case 1:   start = clock();
+            sortImage(Pic, 0, Pic->size - 1, CompareR);
+            end = clock();
+            break;
+        case 2 : start = clock();
+            sortImage(Pic, 0, Pic->size - 1, CompareG);
+            end = clock();
+            break;
+        case 3:   start = clock();
+            sortImage(Pic, 0, Pic->size - 1, CompareB);
+            end = clock();
+            break;
+        case 4 : start = clock();
+            sortImage(Pic, 0, Pic->size - 1, CompareH);
+            end = clock();
+            break;
+        case 5:   start = clock();
+            sortImage(Pic, 0, Pic->size - 1, CompareS);
+            end = clock();
+            break;
+        case 6 : start = clock();
+            sortImage(Pic, 0, Pic->size - 1, CompareV);
+            end = clock();
+            break;
+        case 7:   start = clock();
+            sortImage(Pic, 0, Pic->size - 1, CompareY);
+            end = clock();
+            break;
+        case 8 : start = clock();
+            sortImage(Pic, 0, Pic->size - 1, CompareCb);
+            end = clock();
+            break;
+        case 9:   start = clock();
+            sortImage(Pic, 0, Pic->size - 1, CompareCr);
+            end = clock();
+            break;
+        default : start = clock();
+            sortImage(Pic, 0, Pic->size - 1, CompareH);
+            end = clock();
+            break;
+    }
+    *execTime = ((float)(end - start)) / CLOCKS_PER_SEC;
 }
+
 
 int main() {
     srand(time(NULL));
-    Image *Pic = readImage("../Pics/Babybijau.bmp");
-    printf(" Size : %d header : %s\n",Pic->size, Pic->header);
-    sortImage(Pic, 0, Pic->size - 1, CompareColor);
+    int Method = 0;
+    float execTime;
+    Menu(&Method);
+
+    Image *Pic = readImage("../Pics/test.bmp");
+
+    LaunchSort(&Method, &execTime, Pic);
+    printf("Temps d'execution : %lf sec\n", execTime);
+
     writeImage(Pic, "../Pics/testAfter.bmp");
 
     return 0;

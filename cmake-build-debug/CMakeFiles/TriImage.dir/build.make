@@ -99,19 +99,61 @@ CMakeFiles\TriImage.dir\libbmp.c.s: cmake_force
  /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\TriImage.dir\libbmp.c.s /c C:\Users\bluew\CLionProjects\TriImage\libbmp.c
 <<
 
+CMakeFiles\TriImage.dir\Compare.c.obj: CMakeFiles\TriImage.dir\flags.make
+CMakeFiles\TriImage.dir\Compare.c.obj: ..\Compare.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bluew\CLionProjects\TriImage\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/TriImage.dir/Compare.c.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\TriImage.dir\Compare.c.obj /FdCMakeFiles\TriImage.dir\ /FS -c C:\Users\bluew\CLionProjects\TriImage\Compare.c
+<<
+
+CMakeFiles\TriImage.dir\Compare.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TriImage.dir/Compare.c.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe > CMakeFiles\TriImage.dir\Compare.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\bluew\CLionProjects\TriImage\Compare.c
+<<
+
+CMakeFiles\TriImage.dir\Compare.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TriImage.dir/Compare.c.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\TriImage.dir\Compare.c.s /c C:\Users\bluew\CLionProjects\TriImage\Compare.c
+<<
+
+CMakeFiles\TriImage.dir\Sort.c.obj: CMakeFiles\TriImage.dir\flags.make
+CMakeFiles\TriImage.dir\Sort.c.obj: ..\Sort.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\bluew\CLionProjects\TriImage\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/TriImage.dir/Sort.c.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\TriImage.dir\Sort.c.obj /FdCMakeFiles\TriImage.dir\ /FS -c C:\Users\bluew\CLionProjects\TriImage\Sort.c
+<<
+
+CMakeFiles\TriImage.dir\Sort.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TriImage.dir/Sort.c.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe > CMakeFiles\TriImage.dir\Sort.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\bluew\CLionProjects\TriImage\Sort.c
+<<
+
+CMakeFiles\TriImage.dir\Sort.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TriImage.dir/Sort.c.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\TriImage.dir\Sort.c.s /c C:\Users\bluew\CLionProjects\TriImage\Sort.c
+<<
+
 # Object files for target TriImage
 TriImage_OBJECTS = \
 "CMakeFiles\TriImage.dir\main.c.obj" \
-"CMakeFiles\TriImage.dir\libbmp.c.obj"
+"CMakeFiles\TriImage.dir\libbmp.c.obj" \
+"CMakeFiles\TriImage.dir\Compare.c.obj" \
+"CMakeFiles\TriImage.dir\Sort.c.obj"
 
 # External object files for target TriImage
 TriImage_EXTERNAL_OBJECTS =
 
 TriImage.exe: CMakeFiles\TriImage.dir\main.c.obj
 TriImage.exe: CMakeFiles\TriImage.dir\libbmp.c.obj
+TriImage.exe: CMakeFiles\TriImage.dir\Compare.c.obj
+TriImage.exe: CMakeFiles\TriImage.dir\Sort.c.obj
 TriImage.exe: CMakeFiles\TriImage.dir\build.make
 TriImage.exe: CMakeFiles\TriImage.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\bluew\CLionProjects\TriImage\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable TriImage.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\bluew\CLionProjects\TriImage\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable TriImage.exe"
 	"D:\Programmes\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\TriImage.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1428~1.293\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\TriImage.dir\objects1.rsp @<<
  /out:TriImage.exe /implib:TriImage.lib /pdb:C:\Users\bluew\CLionProjects\TriImage\cmake-build-debug\TriImage.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

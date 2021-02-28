@@ -73,11 +73,11 @@ Image *readImage(char *imgpath)
 	fread(img->header, 54, 1, pfile);
 	fseek(pfile, 18, SEEK_SET);
 	fread(&img->width, 4, 1, pfile);
-	printf("width= %d\n", img->width);
+	//printf("width= %d\n", img->width);
 	pad = (4 - (img->width * 3 % 4)) % 4;
 
 	fread(&img->height, 4, 1, pfile);
-	printf("height= %d\n", img->height);
+	//printf("height= %d\n", img->height);
 
 	img->size = img->height * img->width;
 
@@ -143,6 +143,6 @@ int writeImage (Image *img, char *imgpath)
 	fclose(output);
 	free(img->pix);
 	free(img);
-
+    printf("L'image a bien ete creee dans %s", imgpath);
 	return 0;
 }

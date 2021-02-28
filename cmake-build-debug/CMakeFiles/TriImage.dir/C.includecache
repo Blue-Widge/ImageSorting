@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/bluew/CLionProjects/TriImage/Compare.h
+
+C:/Users/bluew/CLionProjects/TriImage/Sort.c
+Sort.h
+C:/Users/bluew/CLionProjects/TriImage/Sort.h
+
+C:/Users/bluew/CLionProjects/TriImage/Sort.h
+libbmp.h
+C:/Users/bluew/CLionProjects/TriImage/libbmp.h
+
 C:/Users/bluew/CLionProjects/TriImage/libbmp.h
 
 C:/Users/bluew/CLionProjects/TriImage/main.c
@@ -15,6 +25,12 @@ stdlib.h
 -
 time.h
 -
+math.h
+-
 libbmp.h
 C:/Users/bluew/CLionProjects/TriImage/libbmp.h
+Compare.h
+C:/Users/bluew/CLionProjects/TriImage/Compare.h
+Sort.h
+C:/Users/bluew/CLionProjects/TriImage/Sort.h
 

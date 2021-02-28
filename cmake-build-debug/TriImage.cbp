@@ -84,6 +84,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/bluew/CLionProjects/TriImage/Compare.c">
+			<Option target="TriImage"/>
+		</Unit>
+		<Unit filename="C:/Users/bluew/CLionProjects/TriImage/Compare.h">
+			<Option target="TriImage"/>
+		</Unit>
+		<Unit filename="C:/Users/bluew/CLionProjects/TriImage/Sort.c">
+			<Option target="TriImage"/>
+		</Unit>
+		<Unit filename="C:/Users/bluew/CLionProjects/TriImage/Sort.h">
+			<Option target="TriImage"/>
+		</Unit>
 		<Unit filename="C:/Users/bluew/CLionProjects/TriImage/functions.h">
 			<Option target="TriImage"/>
 		</Unit>

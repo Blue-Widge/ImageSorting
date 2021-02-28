@@ -127,6 +127,60 @@ TriImage\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TriImage.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TriImage.dir\build
 .PHONY : TriImage\fast
 
+Compare.obj: Compare.c.obj
+
+.PHONY : Compare.obj
+
+# target to build an object file
+Compare.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TriImage.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TriImage.dir\Compare.c.obj
+.PHONY : Compare.c.obj
+
+Compare.i: Compare.c.i
+
+.PHONY : Compare.i
+
+# target to preprocess a source file
+Compare.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TriImage.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TriImage.dir\Compare.c.i
+.PHONY : Compare.c.i
+
+Compare.s: Compare.c.s
+
+.PHONY : Compare.s
+
+# target to generate assembly for a file
+Compare.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TriImage.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TriImage.dir\Compare.c.s
+.PHONY : Compare.c.s
+
+Sort.obj: Sort.c.obj
+
+.PHONY : Sort.obj
+
+# target to build an object file
+Sort.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TriImage.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TriImage.dir\Sort.c.obj
+.PHONY : Sort.c.obj
+
+Sort.i: Sort.c.i
+
+.PHONY : Sort.i
+
+# target to preprocess a source file
+Sort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TriImage.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TriImage.dir\Sort.c.i
+.PHONY : Sort.c.i
+
+Sort.s: Sort.c.s
+
+.PHONY : Sort.s
+
+# target to generate assembly for a file
+Sort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TriImage.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TriImage.dir\Sort.c.s
+.PHONY : Sort.c.s
+
 libbmp.obj: libbmp.c.obj
 
 .PHONY : libbmp.obj
@@ -190,6 +244,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... TriImage
+	@echo ... Compare.obj
+	@echo ... Compare.i
+	@echo ... Compare.s
+	@echo ... Sort.obj
+	@echo ... Sort.i
+	@echo ... Sort.s
 	@echo ... libbmp.obj
 	@echo ... libbmp.i
 	@echo ... libbmp.s

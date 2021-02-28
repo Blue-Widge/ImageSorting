@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/Users/bluew/CLionProjects/TriImage/Compare.c" "C:/Users/bluew/CLionProjects/TriImage/cmake-build-debug/CMakeFiles/TriImage.dir/Compare.c.obj"
+  "C:/Users/bluew/CLionProjects/TriImage/Sort.c" "C:/Users/bluew/CLionProjects/TriImage/cmake-build-debug/CMakeFiles/TriImage.dir/Sort.c.obj"
   "C:/Users/bluew/CLionProjects/TriImage/libbmp.c" "C:/Users/bluew/CLionProjects/TriImage/cmake-build-debug/CMakeFiles/TriImage.dir/libbmp.c.obj"
   "C:/Users/bluew/CLionProjects/TriImage/main.c" "C:/Users/bluew/CLionProjects/TriImage/cmake-build-debug/CMakeFiles/TriImage.dir/main.c.obj"
   )

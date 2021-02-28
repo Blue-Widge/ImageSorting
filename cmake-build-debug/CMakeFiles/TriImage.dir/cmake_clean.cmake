@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/TriImage.dir/Compare.c.obj"
+  "CMakeFiles/TriImage.dir/Sort.c.obj"
   "CMakeFiles/TriImage.dir/libbmp.c.obj"
   "CMakeFiles/TriImage.dir/main.c.obj"
   "TriImage.exe"
