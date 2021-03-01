@@ -124,7 +124,7 @@ int writeImage (Image *img, char *imgpath)
 	output = fopen(imgpath, "wb");
 	if (!output)
 	{
-		printf ("Impossible d'ouvrir le fichier %s en mode écriture.\n", imgpath);
+		printf ("Can't write image in %s\n", imgpath);
 		return -1;
 	}
 	fwrite(img->header, 72, 1, output);
@@ -143,6 +143,6 @@ int writeImage (Image *img, char *imgpath)
 	fclose(output);
 	free(img->pix);
 	free(img);
-    printf("L'image a bien ete creee dans %s", imgpath);
+    printf("Pic has well been created at %s\n", imgpath);
 	return 0;
 }

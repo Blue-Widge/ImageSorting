@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <math.h>
 #include "libbmp.h"
 #include "Compare.h"
 #include "Sort.h"
@@ -21,14 +20,15 @@ void Menu(int* Method)
 
     for (int i = 0; i<9; ++i)
     {
-        printf("- (%d) Trier en fonction de %.2s\n", i+1, AvailableSorts[i]);
+        printf("- (%d) Sort depending of %.2s\n", i+1, AvailableSorts[i]);
     }
-    printf("\n\n Votre choix (1-9) : ");
+    printf("\n\n Your choice (1-9) : ");
     scanf("%d",Method);
 }
 
 void LaunchSort(int* Method, float* execTime, Image* Pic)
 {
+    // En
     clock_t start, end;
     switch(*Method)
     {
@@ -78,17 +78,18 @@ void LaunchSort(int* Method, float* execTime, Image* Pic)
 
 
 int main() {
+    system("clear");
     srand(time(NULL));
     int Method = 0;
     float execTime;
     Menu(&Method);
 
-    Image *Pic = readImage("../Pics/test.bmp");
+    Image *Pic = readImage("./Pics/Rainbow.bmp");
 
     LaunchSort(&Method, &execTime, Pic);
-    printf("Temps d'execution : %lf sec\n", execTime);
+    printf("Execution time : %lf sec\n", execTime);
 
-    writeImage(Pic, "../Pics/testAfter.bmp");
+    writeImage(Pic, "./Pics/testAfter.bmp");
 
     return 0;
 }

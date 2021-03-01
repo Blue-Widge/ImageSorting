@@ -4,6 +4,7 @@
 
 #ifndef TRIIMAGE_COMPARE_H
 #define TRIIMAGE_COMPARE_H
+
 int CompareR(Pixel* A, Pixel* B);
 int CompareG(Pixel* A, Pixel* B);
 int CompareB(Pixel* A, Pixel* B);
